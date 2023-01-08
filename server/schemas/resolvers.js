@@ -47,6 +47,7 @@ const resolvers = {
           { $push: { savedBooks: bookData } },
           { new: true }
         );
+        console.log(updatedUser);
         return updatedUser;
       }
       throw new AuthenticationError("You need to be logged in!");
